@@ -24,3 +24,23 @@ Each task has a delete button.
 Dark theme
 Modern animations
 Mobile-friendly layout
+
+📘 How It Works
+1️⃣ Add Task
+
+User fills the form → Clicks Add Task → Task is added to To Do column.
+
+2️⃣ Drag & Drop
+Move tasks freely between columns:
+
+column.addEventListener("drop", () => {
+    column.appendChild(dragElement);
+    upadateTaskCounts();
+});
+
+3️⃣ Local Storage
+Every update saves tasks:
+localStorage.setItem("tasks", JSON.stringify(tasksData));
+
+4️⃣ Load Saved Tasks
+When the page loads, tasks are restored automatically.
